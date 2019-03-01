@@ -25,6 +25,7 @@
           <td>Description / Delivery Time</td>
           <td>Price</td>
           <td>Image</td>
+          <td>Vehicle Id</td>
 
 
         </tr>
@@ -38,6 +39,7 @@
             <td>{{$product->productDescription}}</td>
             <td>{{$product->productPrice}}</td>
             <td>{{$product->productImage}}</td>
+
 
             <td><a href="{{ route('products.edit',$product->id)}}" class="btn btn-primary">Edit</a></td>
             <td>

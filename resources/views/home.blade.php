@@ -19,12 +19,7 @@
             </div>
         </div>
     </div>
-   <div class="amountDiv">
 
-            <input type="number" value="1" name="amount" >
-
-            <a class="btn btn-primary" href="{{ route('orders.store')}}" >Add To Shopping Cart</a></td>
-    </div>
 
 </div>
 @endsection

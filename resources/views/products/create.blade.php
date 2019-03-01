@@ -22,11 +22,21 @@
     @endif
       <form method="post" action="{{ route('products.store') }}">
 
+
+
+
         <div class="form-group">
               @csrf
               <label for="name">Product name:</label>
               <input type="text" class="form-control" name="productName"/>
           </div>
+
+
+          <div class="form-group">
+            <label for="id">Vehicle Id:</label>
+            <input type="integer" class="form-control" name="vehicleId"/>
+        </div>
+
 
           <div class="form-group">
                 <label for="category">Product Category:</label>
@@ -47,6 +57,10 @@
                 <label for="image">Product image:</label>
                 <input type="text" class="form-control" name="productImage"/>
           </div>
+
+
+
+
 
           <button type="submit" class="btn btn-primary">Add</button>
       </form>

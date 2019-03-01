@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('productDescription');
             $table->float('productPrice');
             $table->string('productImage');
-
+            $table->integer('vehicleId');
 
             $table->timestamps();
         });

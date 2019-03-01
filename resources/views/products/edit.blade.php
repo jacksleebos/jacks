@@ -29,7 +29,10 @@
           <label for="name">Product name:</label>
           <input type="text" class="form-control" name="productName" value={{ $product->productName }} />
         </div>
-
+        <div class="form-group">
+            <label for="id">Vehicle Id:</label>
+            <input type="integer" class="form-control" name="vehicleId" value={{ $product->vehicleId }} />
+        </div>
         <div class="form-group">
           <label for="category">Product category:</label>
           <input type="integer" class="form-control" name="productCategory" value={{ $product->productCategory }} />
@@ -47,7 +50,7 @@
 
         <div class="form-group">
             <label for="image">Product image:</label>
-            <input type="text" class="form-control" name="productImage" value={{ $product->productPrice }} />
+            <input type="text" class="form-control" name="productImage" value={{ $product->productImage }} />
           </div>
 
 

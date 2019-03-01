@@ -44,7 +44,8 @@ class ProductController extends Controller
      //----------------------------------------------------------------
      $request->validate([
         'productName'=>'required',
-        'productPrice'=> 'required'
+        'productPrice'=> 'required',
+        'vehicleId'=>'required'
          ]);
 
       $share = new Product([
@@ -52,7 +53,8 @@ class ProductController extends Controller
         'productCategory' => $request->get('productCategory'),
         'productDescription' => $request->get('productDescription'),
         'productPrice' => $request->get('productPrice'),
-        'productImage' => $request->get('productImage')
+        'productImage' => $request->get('productImage'),
+        'vehicleId' => $request->get('vehicleId')
 
       ]);
       $share->save();
@@ -98,10 +100,15 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
        //------------------------------------------------------------------------------------------------
-    $request->validate([
-        //'productName'=>'required',
-        'productPrice'=> 'required'
-              ]);
+
+
+     $request->validate([
+                'productName'=>'required',
+                'productPrice'=> 'required',
+                'vehicleId'=>'required'
+                 ]);
+
+
 
         $product = Product::find($id);
         $product->productName = $request->get('productName');
@@ -109,6 +116,7 @@ class ProductController extends Controller
         $product->productDescription = $request->get('productDescription');
         $product->productPrice = $request->get('productPrice');
         $product->productImage = $request->get('productImage');
+        $product->vehicleId = $request -> get('vehicleId');
 
         $product->save();
 

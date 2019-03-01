@@ -111,8 +111,6 @@ class VehicleController extends Controller
         return redirect('/vehicles')->with('success', 'vehicle has been updated');
      //------------------------------------------------------------------------------------------------
 
-
-
     }
 
     /**

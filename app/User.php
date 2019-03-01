@@ -10,13 +10,22 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+    const ADMIN_TYPE = 'admin';
+    const DEFAULT_TYPE = 'default';
+    public function isAdmin()    {
+        dd($this->type);
+        return $this->type === self::ADMIN_TYPE;
+
+    }
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password'
     ];
 
     /**
@@ -36,4 +45,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 }

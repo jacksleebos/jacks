@@ -65,30 +65,30 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+             @if (Route::has('login'))
                 <div class="top-right links">
-                        <a href="/vehicles">Vehicles </a>
-                        <a href="/products">Products </a>
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
 
+                    @auth
+                        <a href="{{route('home') }}">Home</a>
+                        @else
+                             <a href="{{ route('login') }}">Login</a>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                             <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-
-                    <image img src="/images/auto.jpg" alt="Logo"style="width:400px;height:300px;" ></image>
-
-
+                <img src="/images/top.png" alt="Logo"style="width:700px;height:500px;" >
                 <div class="title m-b-md">
                     Jacks Car Supply
                 </div>
+                    <div class="links">
+                        <a href="/vehicles">Vehicles </a>
+                        <a href="/products">Products </a>
+
+                    </div>
 
             </div>
         </div>

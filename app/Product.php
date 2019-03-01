@@ -13,5 +13,12 @@ class Product extends Model
         'productDescription',
         'productPrice',
         'productImage',
+        'vehicleId',
+
     ];
+    public function vehicle()
+    {
+        return $this->belongsTo('App\Vehicle');
+ }
+
 }

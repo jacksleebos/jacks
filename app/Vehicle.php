@@ -11,4 +11,8 @@ class Vehicle extends Model
     'vehicleModel',
     'vehicleBuild',
    ];
+   public function vehicleDetails()
+   {
+       return $this->hasMany('App\Product');
+}
 }
