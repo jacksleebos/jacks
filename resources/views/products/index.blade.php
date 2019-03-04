@@ -38,8 +38,8 @@
             <td>{{$product->productCategory}}</td>
             <td>{{$product->productDescription}}</td>
             <td>{{$product->productPrice}}</td>
-            <td>{{$product->productImage}}</td>
-
+            {{-- <td>{{$product->productImage}}</td> --}}
+<td><img src="{{$product->productImage}}"style="width:100px;height:100px;" /></td>
 
             <td><a href="{{ route('products.edit',$product->id)}}" class="btn btn-primary">Edit</a></td>
             <td>

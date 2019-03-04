@@ -80,7 +80,7 @@
             @endif
 
             <div class="content">
-                <img src="/images/top.png" alt="Logo"style="width:700px;height:500px;" >
+                <img src="/images/top.png" alt="Logo"style="width:800px;height:500px;" >
                 <div class="title m-b-md">
                     Jacks Car Supply
                 </div>

@@ -23,8 +23,6 @@
       <form method="post" action="{{ route('products.store') }}">
 
 
-
-
         <div class="form-group">
               @csrf
               <label for="name">Product name:</label>
@@ -57,10 +55,6 @@
                 <label for="image">Product image:</label>
                 <input type="text" class="form-control" name="productImage"/>
           </div>
-
-
-
-
 
           <button type="submit" class="btn btn-primary">Add</button>
       </form>

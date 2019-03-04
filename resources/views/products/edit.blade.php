@@ -45,7 +45,7 @@
 
         <div class="form-group">
           <label for="price">Product price:</label>
-          <input type="float" class="form-control" name="productPrice" value={{ $product->producPrice }} />
+          <input type="float" class="form-control" name="productPrice" value={{ $product->productPrice }} />
         </div>
 
         <div class="form-group">
