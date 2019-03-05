@@ -12,8 +12,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: orange;
-                color: #636b6f;
+                background-color: gray;
+                color: #2b2e2f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -45,11 +45,11 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 100px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: #2b2e2f;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -80,7 +80,7 @@
             @endif
 
             <div class="content">
-                <img src="/images/top.png" alt="Logo"style="width:800px;height:500px;" >
+                <img src="/images/super.jpg" alt="Logo"style="width:800px;height:350px;" >
                 <div class="title m-b-md">
                     Jacks Car Supply
                 </div>
