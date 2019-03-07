@@ -16,7 +16,7 @@
   {{-- href to create category --}}
   <a href="{{ route('vehicles.create')}}" class="btn btn-primary">Vehicles +  </a></td>
 
-  <table class="table table-striped">
+  <table class="table table-striped bg-light">
     <thead>
         <tr>
           <td>ID</td>

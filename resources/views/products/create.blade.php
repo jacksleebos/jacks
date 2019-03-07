@@ -36,7 +36,6 @@
             <input type="integer" class="form-control" name="vehicleId"/>
         </div>
 
-
           <div class="form-group">
                 <label for="category">Product Category:</label>
                 <input type="integer" class="form-control" name="productCategory"/>

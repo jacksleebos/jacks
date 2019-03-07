@@ -1,7 +1,4 @@
 @extends('layout')
-
-
-
 @section('content')
 <style>
   .uper {
@@ -9,10 +6,10 @@
   }
 </style>
 <div class="uper">
-  @if(session()->get('success'))
-    <div class="alert alert-success">
-      {{ session()->get('success') }}
-    </div><br />
+    @if(session()->get('success'))
+        <div class="alert alert-success">
+        {{ session()->get('success') }}
+        </div><br />
   @endif
   {{-- href to create category --}}
   <a href="{{ route('products.create')}}" class="btn btn-primary">Users +  </a></td>
@@ -23,7 +20,6 @@
           <td>ID</td>
           <td>Name</td>
           <td>Email</td>
-        >
         </tr>
     </thead>
     <tbody>
@@ -31,16 +27,15 @@
         <tr>
             <td>{{$user->id}}</td>
             <td>{{$user->userName}}</td>
-
             <td>{{$product->userEmail}}</td>
             <td><a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Edit</a></td>
-            <td>
-                <form action="{{ route('users.destroy', $user->id)}}" method="post">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
-                </form>
-            </td>
+                <td>
+                    <form action="{{ route('users.destroy', $user->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
         </tr>
         @endforeach
     </tbody>

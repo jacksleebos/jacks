@@ -17,6 +17,7 @@
             @foreach ($errors->all() as $error)
               <li>{{ $error }}</li>
             @endforeach
+
         </ul>
       </div><br />
     @endif
@@ -35,15 +36,6 @@
           <input type="text" class="form-control" name="userPassword" value={{ $user->userPassword }} />
         </div>
 
-
-{{--
-        $table->string('productName');
-        $table->integer('productCategory');
-        $table->string('productDescription');
-        $table->float('productPrice');
-        $table->string('productImage');
-
- --}}
 
         <button type="submit" class="btn btn-primary">Update</button>
     </form>

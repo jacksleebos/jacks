@@ -13,10 +13,12 @@
       {{ session()->get('success') }}
     </div><br />
   @endif
-  {{-- href to create category --}}
+
   <a href="{{ route('products.create')}}" class="btn btn-primary">Add Products +  </a></td>
 
-  <table class="table table-striped">
+
+
+  <table class="table table-striped bg-light">
     <thead>
         <tr>
             <td>ID</td>
@@ -45,10 +47,12 @@
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Delete</button>
+
                 </form>
             </td>
         </tr>
         @endforeach
+
     </tbody>
   </table>
 <div>

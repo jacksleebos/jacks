@@ -18,17 +18,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Jacks Car Supply
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+               {{--  <a class="navbar-brand" href="{{ url('/') }}">
+
+
+                    Homepage test
+                </a> --}}
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -68,11 +70,11 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
-                            <li class="nav-item">  <a class="navbar-brand" href="{{ url('/cart') }}">
-                                <img style="width:25px;height:25px" src=" {{ asset('images/cart.jpg') }} "> ShoppingCart </img>
+                            {{-- </li>
+                            <li class="nav-item">  <a class="navbar-brand" href="{{ url('/welcome') }}">
+                                <img style="width:25px;height:25px" > vehicles & products </img>
                             </a>
-                            </li>
+                            </li> --}}
                         @endguest
                     </ul>
                 </div>

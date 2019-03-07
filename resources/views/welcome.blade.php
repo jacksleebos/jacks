@@ -8,12 +8,13 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: gray;
-                color: #2b2e2f;
+                color: white;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -25,7 +26,7 @@
             }
 
             .flex-center {
-                align-items: center;
+                align-items: top;
                 display: flex;
                 justify-content: center;
             }
@@ -42,6 +43,7 @@
 
             .content {
                 text-align: center;
+                margin-top: 100px;
             }
 
             .title {
@@ -49,7 +51,7 @@
             }
 
             .links > a {
-                color: #2b2e2f;
+                color: white;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -80,17 +82,17 @@
             @endif
 
             <div class="content">
-                <img src="/images/super.jpg" alt="Logo"style="width:800px;height:350px;" >
-                <div class="title m-b-md">
+{{--                 <img src="/images/super.jpg" alt="Logo"style="width:800px;height:350px;" >
+ --}}                <div class="title ">
                     Jacks Car Supply
-                </div>
+                {{-- </div>
                     <div class="links">
                         <a href="/vehicles">Vehicles </a>
                         <a href="/products">Products </a>
 
                     </div>
 
-            </div>
+                </div> --}}
         </div>
     </body>
 </html>

@@ -1,0 +1,15 @@
+/* css style sheet*/
+body {
+    margin: 0;
+Background-image: url("/images/super.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+   /* background-color: black;*/
+    text-align: center;
+  }
+.bg-login {
+    background: rgba(0,0,0,0.5);
+}
+/* .card-body {
+    background-color: rgba(0,0,0,0.0);
+} */
