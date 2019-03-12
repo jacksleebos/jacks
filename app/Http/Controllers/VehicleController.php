@@ -66,7 +66,11 @@ class VehicleController extends Controller
      */
     public function show(Vehicle $vehicle)
     {
-        //
+
+        $products = \App\Product::where('vehicleId', $vehicle->id)->get();
+
+
+        return view('vehicles.show', compact('vehicle', 'products'));
     }
 
     /**

@@ -6,6 +6,14 @@
   .uper {
     margin-top: 40px;
   }
+  h1 {
+      color:white;
+  }
+  th {
+    color:black;
+    font-weight:bold;
+    font-size:18px;
+  }
 </style>
 <div class="uper">
   @if(session()->get('success'))
@@ -14,32 +22,30 @@
     </div><br />
   @endif
 
-  <a href="{{ route('products.create')}}" class="btn btn-primary">Add Products +  </a></td>
 
+<h1>Product Browser</h1>
 
-
-  <table class="table table-striped bg-light">
+  <table class="table table-striped bg-light mt-5 rounded">
     <thead>
         <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Category</td>
-            <td>Description / Delivery Time</td>
-            <td>Price</td>
-            <td>Image</td>
-            <td>Vehicle Id</td>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Description / Delivery Time</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>&nbsp;</th>
         </tr>
     </thead>
     <tbody>
         @foreach($products as $product)
         <tr>
-            <td>{{$product->id}}</td>
+            <td> <a href="/products/{{$product->id}}">{{$product->id}}</a></td>
             <td>{{$product->productName}}</td>
             <td>{{$product->productCategory}}</td>
             <td>{{$product->productDescription}}</td>
             <td>{{$product->productPrice}}</td>
-            {{-- <td>{{$product->productImage}}</td> --}}
-<td><img src="{{$product->productImage}}"style="width:150px;height:80px;" /></td>
+<td><img src="{{$product->productImage}}"style="width:100px;height:50px;" /></td>
 
             <td><a href="{{ route('products.edit',$product->id)}}" class="btn btn-primary">Edit</a></td>
             <td>
@@ -55,5 +61,8 @@
 
     </tbody>
   </table>
+  <a href="{{ route('products.create')}}" class="btn btn-success">Add Product </a>
+  <a class='btn btn-light' href="{{ URL::previous() }}">Previous</a>  <a class='btn btn-warning' href="{{route('home')}}">Home</a>
+
 <div>
 @endsection

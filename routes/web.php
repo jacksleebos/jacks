@@ -18,3 +18,12 @@ Route::resource('products', 'ProductController');
 Route::resource('vehicles', 'VehicleController');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('auth/{user}/edit', 'UserController@edit');
+Route::patch('/auth/{user}', 'UserController@update');
+
+
+
+
+Route::get('/vehicle', function () {
+    return view('vehicles.show');
+});

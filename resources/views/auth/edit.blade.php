@@ -1,5 +1,4 @@
 
-
 @extends('layout')
 
 @section('content')
@@ -11,7 +10,7 @@
   </style>
   <div class="card uper">
     <div class="card-header">
-      Edit Share
+      Edit User Profile
     </div>
     <div class="card-body">
       @if ($errors->any())
@@ -24,18 +23,32 @@
         </div><br />
       @endif
 
-<form method="POST" action="{{ route ('auth.update', $user->id) }}">
+<form
+
+method="POST" action="/auth/{{ $user->id }}">
         @method('PATCH')
         @csrf
-    <input type="text" name="name"  value="{{ $user->name }}" >
 
-    <input type="text" name="address"  value="{{ $user->address }}" >
 
-    <input type="email" name="email"  value="{{ $user->email }}" >
+        <div class="form-group">
+                <label for="name">UserName:</label>
+                <input type="text" class="form-control" name="name"  value="{{ $user->name }}" >
+              </div>
 
-    <input type="password" name="password" >
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" name="email"  value="{{ $user->email }}" >
+      </div>
 
-    <input type="password" name="password_confirmation" >
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" name="password" >
+      </div>
+
+    <div class="form-group">
+        <label for="password">Password Conformation:</label>
+        <input type="password" class="form-control"  name="password_confirmation" >
+      </div>
 
     <button type="submit">Send</button>
 </form>

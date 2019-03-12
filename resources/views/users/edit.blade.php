@@ -10,6 +10,7 @@
   <div class="card-header">
     Edit Share
   </div>
+
   <div class="card-body">
     @if ($errors->any())
       <div class="alert alert-danger">
@@ -29,7 +30,6 @@
           <label for="name">User name:</label>
           <input type="text" class="form-control" name="userName" value={{ $user->userName }} />
         </div>
-
 
         <div class="form-group">
           <label for="category">User email:</label>

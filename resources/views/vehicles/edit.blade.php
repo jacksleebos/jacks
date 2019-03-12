@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Edit Share
+    Edit Vehicle
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -43,4 +43,5 @@
     </form>
   </div>
 </div>
+<a class='btn btn-light' href="{{ URL::previous() }}">Previous</a>  <a class='btn btn-warning' href="{{route('home')}}">Home</a>
 @endsection

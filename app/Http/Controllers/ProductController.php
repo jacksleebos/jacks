@@ -72,7 +72,12 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
-    }
+
+        //$products = \App\Product::where('vehicleId', $vehicle->id)->get();
+
+
+        return view('products.edit', compact('product', 'products'));
+   }
 
     /**
      * Show the form for editing the specified resource.

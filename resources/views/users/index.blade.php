@@ -30,6 +30,7 @@
             <td>{{$product->userEmail}}</td>
             <td><a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Edit</a></td>
                 <td>
+
                     <form action="{{ route('users.destroy', $user->id)}}" method="post">
                     @csrf
                     @method('DELETE')

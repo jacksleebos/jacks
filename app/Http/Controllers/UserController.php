@@ -14,24 +14,21 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    public function edit($id)
+    public function edit(User $user)
     {
-
-        $user= User::find($id);
-
         return view('auth.edit', compact('user'));
 
     }
 
     public function update(Request $request, $id )
     {
-
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:6|confirmed'
         ]);
         $user= User::find($id);
+
         $user->name = $request->get('name');
         $user->email = $request->get('email');
         $user->password = bcrypt($request->get('password'));
@@ -40,4 +37,5 @@ class UserController extends Controller
         return redirect('/home')->with('success','your profile is changed');
 
     }
+
 }

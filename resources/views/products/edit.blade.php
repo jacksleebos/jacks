@@ -9,7 +9,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Edit Share
+    Edit Product
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -54,19 +54,11 @@
           </div>
 
 
-
-{{--
-        $table->string('productName');
-        $table->integer('productCategory');
-        $table->string('productDescription');
-        $table->float('productPrice');
-        $table->string('productImage');
-
- --}}
-
-
         <button type="submit" class="btn btn-primary">Update</button>
+
     </form>
   </div>
+
 </div>
+<a class='btn btn-light' href="{{ URL::previous() }}">Previous</a>  <a class='btn btn-warning' href="{{route('home')}}">Home</a>
 @endsection

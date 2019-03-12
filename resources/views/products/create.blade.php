@@ -59,5 +59,8 @@
           <button type="submit" class="btn btn-primary">Add</button>
       </form>
   </div>
+
+  <a href="{{ route('products.create')}}" class="btn btn-success">Add Product </a>
+
 </div>
 @endsection

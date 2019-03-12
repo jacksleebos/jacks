@@ -82,17 +82,9 @@
             @endif
 
             <div class="content">
-{{--                 <img src="/images/super.jpg" alt="Logo"style="width:800px;height:350px;" >
- --}}                <div class="title ">
+                <div class="title ">
                     Jacks Car Supply
-                {{-- </div>
-                    <div class="links">
-                        <a href="/vehicles">Vehicles </a>
-                        <a href="/products">Products </a>
 
-                    </div>
-
-                </div> --}}
         </div>
     </body>
 </html>
